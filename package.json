@@ -1,0 +1,26 @@
+{
+  "name": "sls",
+  "version": "1.0.0",
+  "description": "## Welcome! 👋",
+  "main": "index.js",
+  "scripts": {
+    "compiler:sass": "node-sass SASS/main.scss CSS/style.css -w",
+    "server": "live-server --port=8181 --browser=chrome",
+    "start": "npm-run-all server compiler:sass",
+
+    "compiler:sass": "node-sass sass/main.scss css/style.comp.css",
+    "compress:css": "node-sass css/style.comp.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compiler:sass compress:css"
+  },
+  "author": "zakaria",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  }
+}

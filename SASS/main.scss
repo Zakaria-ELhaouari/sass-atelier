@@ -5,35 +5,39 @@
 $text-color-primary: hsl(192, 100%, 9%);
 $text-color-secondary: hsl(208, 11%, 55%);
 $color-accent: hsl(322, 100%, 66%);
-$main-box-shadoww: 0px 0px 20px rgba($color: #000000, $alpha: 0.1);
+$main-box-shadoww: 0px 0px 20px
+  rgba(
+    $color: #000000,
+    $alpha: 0.1
+  );
 $footer-color: hsl(192, 100%, 96%);
 $trans-cubic: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); //des transitions sur les boutons
 
-
-//mixin pour l'alignement flexbox 
+//mixin pour l'alignement flexbox
 @mixin flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
 //mixin grid ajustement
 @mixin grid {
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "feature-text feature-img-cont"; //nom des classes
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "feature-text feature-img-cont"; //nom des classes
 }
-
-//mixin pour le responsive  @content = ce que vous allez ecrire en CSS 
+// mixin style card
+@mixin style {
+  box-shadow: -1px 2px 37px -6px rgba(0, 0, 0, 0.75);
+  margin: 4em 0;
+  border-radius: 15px;
+}
+//mixin pour le responsive  @content = ce que vous allez ecrire en CSS
 @mixin responsive($arg) {
   @media screen and (max-width: $arg) {
     @content;
   }
 }
-
 
 //la suppression des espacement et utilisation de la technique du box-sizing(les elements reste sur le meme container)
 *,
@@ -66,4 +70,6 @@ img {
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+@import "workflow";
 
