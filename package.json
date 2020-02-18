@@ -4,29 +4,21 @@
   "description": "le but du Workshop est de vous mettre en situation ou le client exige une refonte de la page sauf que l'équipe a eu un retard en ce qui concerne la livraison du produit.",
   "main": "index.js",
   "scripts": {
-
-    "Mode-production":"==============Branch Prod==============",
-
+    "Mode-production": "==============Branch Prod==============",
     "watch:sass:prod": "node-sass sass/main.scss css/style.css -w",
     "server:prod": "live-server --port=8181 --browser=chrome",
     "start:prod": "concurrently  \"npm run server:prod\" \"npm run watch:sass\"",
-    "prefix:css": "postcss css/style.concat.css --use autoprefixer -o css/style.prefix.css",
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "building-prod": "npm-run-all  prefix:css compress:css",
-
-    "fin-production":"===========================================",
-
-
-      
-    "Mode-dev":"==============Branch dev==============",
-
-     "watch-dev" : "node-sass sass/main.scss css/style.comp.css -w",
-     "start:dev" : "concurrently  \"npm run server:prod\" \"npm run watch-dev\"",
-     "compiler:sass": "node-sass sass/main.scss css/style.comp.css",
-     "concat:css": "concat -o css/style.concat.css css/font-awesome.css css/style.comp.css",
-     "building-dev": "npm-run-all compiler:sass",
-
-    "fin-dev":"==============Branch dev=============="
+    "fin-production": "===========================================",
+    "Mode-dev": "==============Branch dev==============",
+    "watch-dev": "node-sass sass/main.scss css/style.comp.css -w",
+    "start:dev": "concurrently  \"npm run server:prod\" \"npm run watch-dev\"",
+    "compiler:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/font-awesome.css css/style.comp.css",
+    "building-dev": "npm-run-all compiler:sass",
+    "fin-dev": "==============Branch dev=============="
   },
   "repository": {
     "type": "git",
