@@ -1,0 +1,76 @@
+@mixin styl { 
+    background-color: rgb(250, 248, 248);
+    box-shadow: 1px 2px 37px -6px rgb(218, 215, 215);
+    margin: 2em;
+    border-radius: 15px;
+}
+
+
+.main__features{
+
+    @include flex;
+    @include styl;
+
+
+}
+.main__feature-img-cont{
+   
+    img{
+        padding: 4em 3em ;
+         width: 100%;
+
+
+    }
+}
+
+
+  .main__features{
+    
+      width: 100%;
+   
+
+  }
+  .main__feature-desc{
+    padding-left: 5em;
+    padding-top: 2em;
+    width: 84%;
+    color: $text-color-secondary;
+  }
+  .main__feature-title{
+      padding-left: 3.5em;
+  }
+  .main__features-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (max-width:1024px ) {
+      .main__features{
+
+        padding: 30px;
+        flex-direction: column-reverse;
+
+      }
+      .main__feature-desc{
+
+
+        text-align: center;
+      
+        margin-top: 40px;
+        padding-left: 2em;
+      }
+      .main__feature-img-cont{
+
+       position: center;
+
+
+      }
+      .main__feature-title{
+          text-align: center;
+          padding-left: 0;
+      }
+
+
+
+
+}
