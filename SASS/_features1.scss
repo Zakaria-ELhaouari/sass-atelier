@@ -1,84 +1,77 @@
-.main__features{
-    @include grid;
-    @include style;
+.main__features {
+  @include grid;
+  @include style;
+}
+.main__feature-img-cont {
+  img {
+    padding: 2em 3em;
   }
-  .main__feature-img-cont{
-   img{
-     padding:2em 3em;
-  
-   }
-  }
- 
-  // .main__features{
-  //   @include grid();
-  // }
-  .main__feature-text{
-  padding-top: 8em;
-  padding-left: 3em;
-   }
-  
-  .main__feature-title{
-    padding-bottom: 1em;
-  }
-  .main__feature-desc{
-    color:$text-color-secondary ;
+}
 
+// .main__features{
+//   @include grid();
+// }
 
-  }
-  .main__features-reverse{
+.container {
+  .main__features-reverse {
     display: flex;
     flex-direction: row-reverse;
-    
-    
-    
   }
-  .banner{
+  .main__features {
+    .main__feature-text {
+      padding: 6em 2em;
+      font-size: 1em;
+
+      .main__feature-title {
+        padding-bottom: 1em;
+      }
+
+      .main__feature-desc {
+        color: $text-color-secondary;
+      }
+    }
+  }
+  .banner {
     text-align: center;
     box-shadow: -1px 2px 20px -6px rgba(0, 0, 0, 0.75);
     margin: 2em 0;
     border-radius: 30px;
     padding: 70px;
-  width: 60%;
-  margin-left: 17em;
-  
-  
-  }
-  .banner h2{
-    padding-bottom: 1em;
-  }
-  .banner__btn{
-    background-color:$color-accent ;
-    color: white;
-    text-shadow: 1px 1px 2px $main-box-shadoww;
-    padding-bottom: 2em;
-  }
-  .banner a{
-    padding: .6em 3em;
-    text-decoration: none;
-    border-radius:100px;
-   }  
-   @media screen and (max-width: 800px){
-    .main__features{
+    width: 60%;
+    margin-left: 17em;
 
-        padding: 20px;
-        display: flex;
-        flex-direction: column-reverse;
+    &__title {
+      padding-bottom: 1em;
+    }
 
-      }
-      .main__feature-text{
-          text-align: center;
-          padding: 1em;
-      }
-      .banner{
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        width: 100%;
-        
-      }
-    
+    &__btn {
+      background-color: $color-accent;
+      color: white;
+      text-shadow: 1px 1px 2px $main-box-shadoww;
+      padding-bottom: 2em;
+      padding: 0.6em 3em;
+      text-decoration: none;
+      border-radius: 100px;
+    }
+  }
+}
 
-    
-      
-      
+@media screen and (max-width: 800px) {
+  .container {
+    .main__features {
+      padding: 20px;
+      display: flex;
+      flex-direction: column-reverse;
+      .main__feature-text {
+        text-align: center;
+        padding: 1em;
       }
+    }
+    .banner {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
