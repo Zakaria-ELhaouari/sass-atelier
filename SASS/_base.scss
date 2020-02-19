@@ -39,6 +39,14 @@ $trans-cubic: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); //des transitions sur l
   }
 }
 
+// mixin col-link
+@mixin col {
+  color: $footer-color; 
+  font-weight: bold;
+  font-size: 15px; 
+  text-decoration: none; 
+}
+
 
 
 //la suppression des espacement et utilisation de la technique du box-sizing(les elements reste sur le meme container)
