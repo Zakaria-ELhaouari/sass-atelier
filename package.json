@@ -4,6 +4,7 @@
   "description": "le but du Workshop est de vous mettre en situation ou le client exige une refonte de la page sauf que l'équipe a eu un retard en ce qui concerne la livraison du produit.",
   "main": "index.js",
   "scripts": {
+    
     "Mode-production": "==============Branch Prod==============",
     "watch:sass:prod": "node-sass sass/main.scss css/style.css -w",
     "server:prod": "live-server --port=8181 --browser=chrome",
@@ -12,6 +13,7 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "building-prod": "npm-run-all  prefix:css compress:css",
     "fin-production": "===========================================",
+
     "Mode-dev": "==============Branch dev==============",
     "watch-dev": "node-sass sass/main.scss css/style.comp.css -w",
     "start:dev": "concurrently  \"npm run server:prod\" \"npm run watch-dev\"",
