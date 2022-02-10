@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/ziko1999/sass-atelier#readme",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",
